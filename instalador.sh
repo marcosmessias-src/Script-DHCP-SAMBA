@@ -18,6 +18,9 @@ fi
 echo -e "\033[0;32mUPDATE REALIZADO COM SUCESSO.\033[0m"
 #Fim do update
 
+#Instala o SUDO
+apt-get install -y sudo
+
 #-------------------------------------------------------------
 #Instalação do DHCP
 echo -e "\033[0;32mINSTALANDO O DHCP...\033[0m"
@@ -53,8 +56,24 @@ echo "netmask 255.255.255.0" >> /etc/network/interfaces
 echo "network 192.168.100.0" >> /etc/network/interfaces
 echo "broadcast 192.168.100.255" >> /etc/network/interfaces
 echo -e "\033[0;32m ARQUIVO INTERFACES CONFIGURADO COM SUCESSO. \033[0m"
+#--------------------------------------------------------------------
+#Instalando o SAMBA
+if ! apt-get install -yes samba
+then
+	echo "Ocorreu um erro ao tentar instalar o SAMBA"
+	exit 1
+fi
+
+#Cria a pasta que será compartilhada no samba
+mkdir /root/samba/teste
+
+mv /etc/samba/smb.conf /etc/samba/smb.original.conf
+mv samba.txt /etc/samba/smb.conf
+
+service smbd restart
+
 #---------------------------------------------------------------------
 #Finalizando o script
-
-echo -e "\033[0;32m AGORA ESTÁ TUDO PRONTO  :D\033[0m"
+echo -e "\033[0;32mPARA ADICIONAR O USUARIO PARA O SAMBA DIGITE: smbpasswd -a nomedousuario\033[0m"
+echo -e "\033[0;32mAGORA ESTÁ TUDO PRONTO  :D\033[0m"
 echo -e "\033[1;32mEXECUTE O COMANDO:\033[0m" "\033[0;31mreboot\033[0m"
