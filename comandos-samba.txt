@@ -1,0 +1,1 @@
+smbpasswd -a nomedousuario  ->> para adicionar um usuario no samba
