@@ -1,5 +1,6 @@
 # Configuração do DHCPD.conf
 
+<<<<<<< HEAD
 #DDNS
 ddns-update-style none;
 
@@ -19,6 +20,20 @@ authoritative;
 log-facility local7;
 
 #Escopo de rede
+=======
+ddns-update-style none;
+
+option domain-name-servers 192.168.0.1;
+
+default-lease-time 600;
+
+max-lease-time 7200;
+
+authoritative;
+
+log-facility local7;
+
+>>>>>>> e608e4a4c2cf0512139b4451a190eb89fb229aab
 subnet 192.168.100.0 netmask 255.255.255.0{
 	range 192.168.100.20 192.168.100.40;
 	option routers 192.168.100.1;
