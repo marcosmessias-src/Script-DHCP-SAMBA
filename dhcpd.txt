@@ -1,17 +1,24 @@
 # Configuração do DHCPD.conf
 
+#DDNS
 ddns-update-style none;
 
+#Servidor de dominio
 option domain-name-servers 192.168.0.1;
 
+#Tempo padrão de concessão
 default-lease-time 600;
 
+#Tempo máximo de concessão
 max-lease-time 7200;
 
+#Servidor Prioritário
 authoritative;
 
+#Log
 log-facility local7;
 
+#Escopo de rede
 subnet 192.168.100.0 netmask 255.255.255.0{
 	range 192.168.100.20 192.168.100.40;
 	option routers 192.168.100.1;
