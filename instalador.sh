@@ -1,4 +1,11 @@
-#Inicio do Script
+#################################
+#           Criador		#
+#    	Marcos Messias 		#
+#  marcosmessias1998@gmail.com	#
+#   Github: marcosmessias-src	#
+#################################
+
+# Repositório do projeto: https://github.com/marcosmessias-src/script-instalador
 
 #Inicio do comando update
 echo Fazendo update...
@@ -31,3 +38,16 @@ echo Modificando o arquivo dhcpd.conf
 mv /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.backup
 mv dhcpd.txt /etc/dhcp/dhcpd.conf
 echo arquivo modificado com sucesso
+
+#Estes comandos adicionam a configuração LAN ao arquivo /etc/network/interfaces
+echo CONFIGURANDO O ARQUIVO INTERFACES
+sed -i 's/# The primary network interface/# REDE WAN/g' /etc/network/interfaces
+echo "" >> /etc/network/interfaces
+echo "# REDE LAN" >> /etc/network/interfaces
+echo "allow-hotplug enp0s8" >> /etc/network/interfaces
+echo "iface enp0s8 inet static" >> /etc/network/interfaces
+echo "address 192.168.100.1" >> /etc/network/interfaces
+echo "netmask 255.255.255.0" >> /etc/network/interfaces
+echo "network 192.168.100.0" >> /etc/network/interfaces
+echo "broadcast 192.168.100.255" >> /etc/network/interfaces
+echo ARQUIVO INTERFACES CONFIGURA.
