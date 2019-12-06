@@ -26,4 +26,8 @@ echo Modificando o arquivo Interfaces
 sed -i 's/INTERFACESv4=""/INTERFACESv4="enp0se8"/g' /etc/default/isc-dhcp-server
 echo Arquivo interfaces modificado com sucesso.
 
-
+#Este comando modifica o arquivo dhcpd.conf
+echo Modificando o arquivo dhcpd.conf
+mv /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.backup
+mv dhcpd.txt /etc/dhcp/dhcpd.conf
+echo arquivo modificado com sucesso
