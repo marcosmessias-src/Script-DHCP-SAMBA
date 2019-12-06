@@ -1,13 +1,13 @@
 [global]
 
-server string = Servidor Samba    #Nome DNS
-netbios name = servidorsambateste    #Nome NetBIOS
-workgroup = WORKGROUP    #Grupo de trabalho dos clientes Windows
-security = share #Isso fará com que uma senha Unix seja solicitada somente aos usuários que não possuem permissão para acesso
+server string = Servidor Samba
+netbios name = Servidor de Arquivos
+workgroup = WORKGROUP
+security = share
 log = /var/logs/samba/%m.log
 
-[teste] #Nome do compartilhamento
-comment: área restrita ao departamento de vendas
-path: /samba/teste
-public: yes #Caso o acesso tenha de ser feito com uso de senha, digite “no”
-writable = yes #Isso irá permitir alterações no diretório (“yes” ou “no”)
+[teste]
+comment: Area restrita
+path: /root/samba/teste
+public: yes
+writable = yes
