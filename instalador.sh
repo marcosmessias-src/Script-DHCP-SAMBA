@@ -8,6 +8,7 @@ then
 	exit 1
 fi
 echo Update realizado com sucesso.
+#Fim do update
 
 #Instalação do DHCP
 echo Iniciando instalação do DHCP
@@ -17,3 +18,12 @@ then
 	exit 1
 fi
 echo DHCP instalado com sucesso.
+#Fim da instalação do DHCP
+
+#Inicio da configuração do DHCP e das Interfaces
+#Este comando modifica o arquivo interfaces para a minha rede LAN
+echo Modificando o arquivo Interfaces
+sed -i 's/INTERFACESv4=""/INTERFACESv4="enp0se8"/g' /etc/default/isc-dhcp-server
+echo Arquivo interfaces modificado com sucesso.
+
+
