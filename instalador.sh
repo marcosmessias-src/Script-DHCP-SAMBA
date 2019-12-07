@@ -64,6 +64,7 @@ then
 fi
 
 #Cria a pasta que será compartilhada no samba
+mkdir /root/samba/
 mkdir /root/samba/teste
 
 mv /etc/samba/smb.conf /etc/samba/smb.original.conf
