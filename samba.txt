@@ -1,13 +1,15 @@
 [global]
 
 server string = Servidor Samba
-netbios name = Servidor de Arquivos
+netbios name = Arquivos
 workgroup = WORKGROUP
 security = user
 log = /var/logs/samba/%m.log
+rlimit_max: 1
+
 
 [teste]
 comment: Area restrita
-path: /root/samba/teste
+path: /root/samba/teste/
 public: yes
 writable = yes
