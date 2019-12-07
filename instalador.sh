@@ -72,7 +72,6 @@ mv samba.txt /etc/samba/smb.conf
 
 service smbd restart
 echo TESTE DE ERROS SAMBA
-testparm
 #---------------------------------------------------------------------
 #Finalizando o script
 
