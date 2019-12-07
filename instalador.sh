@@ -70,9 +70,12 @@ mv /etc/samba/smb.conf /etc/samba/smb.original.conf
 mv samba.txt /etc/samba/smb.conf
 
 service smbd restart
-
+echo TESTE DE ERROS SAMBA
+testparm
 #---------------------------------------------------------------------
 #Finalizando o script
+
+echo ""
 echo "#################################"
 echo "#           Criador             #"
 echo "#       Marcos Messias          #"
