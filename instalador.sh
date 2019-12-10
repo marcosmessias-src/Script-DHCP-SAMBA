@@ -34,7 +34,7 @@ echo -e "\033[0;34m---------- DHCP INSTALADO COM SUCESSO ----------\033[0m"
 
 #--------------------------------------------------------------------
 #Estes comandos configuram o arquivo /etc/default/isc-dhcp-server para a minha rede LAN
-sed -i 's/INTERFACESv4=""/INTERFACESv4="enp0se8"/g' /etc/default/isc-dhcp-server
+sed -i 's/INTERFACESv4=""/INTERFACESv4="enp0s8"/g' /etc/default/isc-dhcp-server
 echo -e "\033[0;32m---------- ARQUIVO ISC-DHCP-SERVER CONFIGURADO ----------\033[0m"
 
 #--------------------------------------------------------------------
