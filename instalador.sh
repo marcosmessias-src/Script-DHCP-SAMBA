@@ -71,17 +71,10 @@ mv /etc/samba/smb.conf /etc/samba/smb.original.conf
 mv samba.txt /etc/samba/smb.conf
 
 service smbd restart
-echo TESTE DE ERROS SAMBA
+
 #---------------------------------------------------------------------
 #Finalizando o script
 
-echo ""
-echo "#################################"
-echo "#           Criador             #"
-echo "#       Marcos Messias          #"
-echo "#  marcosmessias1998@gmail.com  #"
-echo "#   Github: marcosmessias-src   #"
-echo "#################################"
 echo -e "\033[0;32mPARA ADICIONAR O USUARIO PARA O SAMBA DIGITE: smbpasswd -a nomedousuario\033[0m"
 echo -e "\033[0;32mAGORA ESTÁ TUDO PRONTO  :D\033[0m"
 echo -e "\033[1;32mEXECUTE O COMANDO:\033[0m" "\033[0;31mreboot\033[0m"
