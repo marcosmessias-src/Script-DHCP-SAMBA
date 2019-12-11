@@ -1,4 +1,5 @@
-﻿#DDNS
+
+#DDNS
 ddns-update-style none;
 
 #Servidor de dominio
