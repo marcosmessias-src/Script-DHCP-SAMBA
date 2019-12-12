@@ -19,7 +19,11 @@ echo -e "\033[0;32m---------- UPDATE REALIZADO COM SUCESSO ----------\033[0m"
 #Fim do update
 
 #Instala o SUDO
-apt-get install -y sudo
+if ! apt-get install -y sudo
+then
+	echo "Não doi possível instalar o sudo"
+	exit 1
+fi
 
 #-------------------------------------------------------------
 #Instalação do DHCP
@@ -84,4 +88,3 @@ service isc-dhcp-server restart
 
 echo -e "\033[0;33mPARA ADICIONAR O USUARIO PARA O SAMBA DIGITE: smbpasswd -a nomedousuario\033[0m"
 echo -e "\033[0;32mAGORA ESTÁ TUDO PRONTO  :D\033[0m"
-
