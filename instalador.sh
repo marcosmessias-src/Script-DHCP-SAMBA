@@ -79,12 +79,8 @@ mv samba.txt /etc/samba/smb.conf
 echo -e "\033[0;32m---------- REINICIANDO O SAMBA ----------\033[0m"
 service smbd restart
 #---------------------------------------------------------------------
-#Reinicia os serviços
-service networking restart
-service isc-dhcp-server restart
-
-#---------------------------------------------------------------------
 #Finalizando o script
 
 echo -e "\033[0;33mPARA ADICIONAR O USUARIO PARA O SAMBA DIGITE: smbpasswd -a nomedousuario\033[0m"
-echo -e "\033[0;32mAGORA ESTÁ TUDO PRONTO  :D\033[0m"
+echo -e "\033[0;32mAGORA ESTÁ TUDO PRONTO\033[0m"
+reboot
