@@ -37,7 +37,7 @@ echo -e "\033[0;32m---------- ARQUIVO ISC-DHCP-SERVER CONFIGURADO ----------\033
 #--------------------------------------------------------------------
 #Estes comandos configuram o arquivo dhcpd.conf
 mv /etc/dhcp/dhcpd.conf /etc/dhcp/dhcpd.conf.backup
-mv dhcpd.txt /etc/dhcp/dhcpd.conf
+mv dhcpd2.txt /etc/dhcp/dhcpd.conf
 echo -e "\033[0;32m---------- ARQUIVO /ETC/DHCP/DHCPD.CONF CONFIGURADO ----------\033[0m"
 
 #--------------------------------------------------------------------
