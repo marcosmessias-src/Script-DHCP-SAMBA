@@ -47,10 +47,10 @@ echo "" >> /etc/network/interfaces
 echo "# REDE LAN" >> /etc/network/interfaces
 echo "allow-hotplug enp0s8" >> /etc/network/interfaces
 echo "iface enp0s8 inet static" >> /etc/network/interfaces
-echo "address 192.168.1.1" >> /etc/network/interfaces
+echo "address 192.168.2.1" >> /etc/network/interfaces
 echo "netmask 255.255.255.0" >> /etc/network/interfaces
-echo "network 192.168.1.0" >> /etc/network/interfaces
-echo "broadcast 192.168.1.255" >> /etc/network/interfaces
+echo "network 192.168.2.0" >> /etc/network/interfaces
+echo "broadcast 192.168.2.255" >> /etc/network/interfaces
 echo -e "\033[0;32m---------- ARQUIVO INTERFACES CONFIGURADO COM SUCESSO ---------- \033[0m"
 #--------------------------------------------------------------------
 #Instalando o SAMBA
