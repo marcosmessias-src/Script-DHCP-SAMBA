@@ -60,25 +60,7 @@ echo "network 192.168.100.0" >> /etc/network/interfaces
 echo "broadcast 192.168.100.255" >> /etc/network/interfaces
 echo -e "\033[0;32m---------- ARQUIVO INTERFACES CONFIGURADO COM SUCESSO ---------- \033[0m"
 #--------------------------------------------------------------------
-#Instalando o SAMBA
-if ! apt-get install -y samba
-then
-	echo "Ocorreu um erro ao tentar instalar o SAMBA"
-	exit 1
-fi
-echo -e "\033[0;32m---------- SAMBA INSTALADO COM SUCESSO ----------\033[0m"
-#Cria a pasta que será compartilhada no samba
-echo -e "\033[0;32m---------- CRIANDO REPOSITÓRIO SAMBA /root/samba/teste ----------\033[0m"
-mkdir /root/samba/
-mkdir /root/samba/teste
 
-echo -e "\033[0;32m---------- CONFIGURANDO O ARQUIVO SMB.CONF ----------\033[0m"
-mv /etc/samba/smb.conf /etc/samba/smb.original.conf
-mv samba.txt /etc/samba/smb.conf
-
-echo -e "\033[0;32m---------- REINICIANDO O SAMBA ----------\033[0m"
-service smbd restart
-#---------------------------------------------------------------------
 #Finalizando o script
 
 echo -e "\033[0;33mPARA ADICIONAR O USUARIO PARA O SAMBA DIGITE: smbpasswd -a nomedousuario\033[0m"
